@@ -1,5 +1,5 @@
-Rst-Extractor
-=============
+Sphinx-Extractor
+================
 
 A `Sphinx <https://www.sphinx-doc.org>`_ extension to extract 
 `rst code <https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html>`_ from text-based files.
