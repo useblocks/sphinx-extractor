@@ -1,0 +1,7 @@
+@startuml
+@rst
+.. note::
+
+   This is a sphinx default directive of note.
+@endrst
+@enduml

@@ -1,0 +1,52 @@
+[tool.poetry]
+name = "sphinx-extractor"
+version = "0.1.0"
+description = "A Sphinx extension to extract rst code from text-based files."
+authors = [
+    "Haiyang Zhang <haiyang.zhang@useblocks.com>",
+]
+maintainers = [
+    "Haiyang Zhang <haiyang.zhang@useblocks.com>",
+]
+license = "MIT"
+readme = "README.rst"
+homepage = ""
+repository = ""
+documentation = ""
+classifiers = [
+    'Development Status :: 3 - Alpha',
+    'Intended Audience :: Developers',
+    'License :: OSI Approved :: MIT License',
+    'Operating System :: OS Independent',
+    'Programming Language :: Python',
+    'Programming Language :: Python :: 3',
+    'Programming Language :: Python :: 3.7',
+    'Programming Language :: Python :: 3.8',
+    'Programming Language :: Python :: 3.9',
+    'Topic :: Documentation',
+    'Topic :: Utilities',
+    'Framework :: Sphinx :: Extension',
+]
+packages = [
+    { include = "sphinx_extractor" },
+]
+
+[tool.poetry.dependencies]
+python = "^3.7"
+sphinx = "^5.0"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.0"
+pytest-xdist = "*"
+tox = "*"
+pre-commit = "^2.20"
+
+[tool.black]
+line-length = 120
+
+[tool.isort]
+profile = "black"
+
+[build-system]
+requires = ["poetry-core>=1.2.0"]
+build-backend = "poetry.core.masonry.api"

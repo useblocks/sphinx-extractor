@@ -1,0 +1,11 @@
+This is example test txt file.
+
+@startrst
+.. code-block:: ruby
+
+   Some Ruby code.
+
+.. note::
+
+   something stuff to note.
+@endrst

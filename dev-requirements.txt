@@ -1,0 +1,5 @@
+sphinx>=5.0
+pytest>=7.0
+pytest-xdist
+pre-commit>=2.20
+tox

@@ -1,0 +1,33 @@
+# Environments
+.env
+.venv
+env/
+venv/
+.envrc
+.direnv
+ENV/
+.pvenv/
+*.pyc
+
+# cache
+*pycache*
+.pytest_cache
+.cache/
+.idea
+.tox/
+
+# build
+build
+_build
+
+# packaging/distribution
+.eggs/
+eggs/
+sdist/
+dist/
+*.egg-info/
+*.egg
+wheels/
+
+# vscode
+.vscode/
