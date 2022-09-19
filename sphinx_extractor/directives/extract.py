@@ -2,7 +2,6 @@ import os
 import re
 
 from docutils.parsers.rst import Directive, directives
-
 from sphinx.util import logging
 
 logger = logging.getLogger(__name__)

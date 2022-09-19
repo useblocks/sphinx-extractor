@@ -1,7 +1,6 @@
 """A Sphinx extension to extract rst code from text-based files."""
 from sphinx_extractor.directives.extract import ExtractDirective
 
-
 VERSION = "0.1.0"
 
 
