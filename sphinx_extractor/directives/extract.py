@@ -73,6 +73,24 @@ class ExtractDirective(Directive):
                 )
 
             rst_content = found_rst_code.splitlines()
+
+            # calculate and remove leading spaces for extracted block content
+            block_start_line = next((i, v) for i, v in enumerate(rst_content) if v)
+            block_start_line_no = block_start_line[0]
+            # remove empty line before block start content
+            rst_content = rst_content[block_start_line_no:]
+            block_start_line_content = block_start_line[1]
+            cnt_leading_spaces = len(block_start_line_content) - len(block_start_line_content.lstrip())
+            if cnt_leading_spaces > 0:
+                new_rst_content = []
+                for line in rst_content:
+                    if line:
+                        new_line = re.sub(f"^ {{{cnt_leading_spaces}}}", "", line)
+                        new_rst_content.append(new_line)
+                    else:
+                        new_rst_content.append(line)
+                rst_content = new_rst_content
+
             self.state_machine.insert_input(rst_content, self.state_machine.document.attributes["source"])
         else:
             logger.info(f"Could not find rst code based on given pattern from given file {found_extract_file_path}.")
