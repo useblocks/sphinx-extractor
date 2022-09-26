@@ -9,49 +9,34 @@ It is tested for file type of txt, py, puml, and md.
 
 It uses directive :ref:`extract` to extract rst code from specified location in given file.
 
-.. _install:
-
-Installation
-------------
-
-Using pip
-~~~~~~~~~
-
-.. code-block:: bash
-
-   pip install sphinx-extractor
-
-Using source code
-~~~~~~~~~~~~~~~~~
-
-.. code-block:: bash
-
-   git clone git@github.com:useblocks/sphinx-extractor.git
-   cd sphinx-extractor
-   pip install .
-
 .. _usage:
 
 Usage
 -----
 
-To use this extension, simply add `sphinx_extractor` to the project's extension list of your **conf.py** file.
+After :ref:`install` and :ref:`activate`, use directive :ref:`extract` in your rst files like below:
 
-.. code-block:: python
-
-   extensions = ["sphinx_extractor",]
-
-In your rst file, use directive :ref:`extract`.
-
-.. _example:
-
-Example
--------
 
 Extract from txt file
 ~~~~~~~~~~~~~~~~~~~~~
 
-**Example**
+To extract rst code from the following example content of my.txt file:
+
+.. code-block::
+
+   This is example test txt file.
+
+   @startrst
+   .. code-block:: ruby
+
+      Some Ruby code.
+
+   .. note::
+
+      something stuff to note.
+   @endrst
+
+Use the directive :ref:`extract` like following:
 
 .. code-block:: rst
 
@@ -59,7 +44,7 @@ Extract from txt file
       :start: @startrst
       :end: @endrst
 
-**Result**
+The directive :ref:`extract` block will be replaced with the extracted rst content:
 
 .. extract:: ../tests/doc_test/utils/mytxt.txt
    :start: @startrst
@@ -67,6 +52,23 @@ Extract from txt file
 
 Extract from py file
 ~~~~~~~~~~~~~~~~~~~~
+
+**Example python file content**
+
+.. code-block::
+
+   def my_app():
+    """
+    @rst
+    .. code-block:: python
+
+       Some python code.
+
+       def dummy():
+           pass
+    @endrst
+    """
+    pass
 
 **Example**
 
@@ -86,5 +88,6 @@ Extract from py file
 .. toctree::
    :maxdepth: 2
 
+   installation
    directives
    changelog
