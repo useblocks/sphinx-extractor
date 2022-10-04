@@ -26,7 +26,7 @@ project = "Sphinx-Extractor"
 copyright = "2022, team useblocks"
 author = "team useblocks"
 
-version = "0.1"
+version = "0.1.0"
 
 language = "en"
 

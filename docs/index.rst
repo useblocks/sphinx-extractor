@@ -90,4 +90,5 @@ Extract from py file
 
    installation
    directives
+   license
    changelog
