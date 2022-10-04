@@ -10,9 +10,8 @@ maintainers = [
 ]
 license = "MIT"
 readme = "README.rst"
-homepage = ""
-repository = ""
-documentation = ""
+repository = "https://github.com/useblocks/sphinx-extractor"
+documentation = "https://useblocks.com/sphinx-extractor/"
 classifiers = [
     'Development Status :: 3 - Alpha',
     'Intended Audience :: Developers',
